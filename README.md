@@ -2,7 +2,7 @@
 
 A React-based implementation of Instagram Stories feature.
 
-![Instagram Stories Demo](https://famous-dolphin-7947a2.netlify.app/)
+Live Demo:[https://famous-dolphin-7947a2.netlify.app/](https://famous-dolphin-7947a2.netlify.app/)
 
 ## Features
 
