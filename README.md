@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
+# Instagram Stories Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based implementation of Instagram Stories feature.
 
-Currently, two official plugins are available:
+![Instagram Stories Demo](https://famous-dolphin-7947a2.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 📱 Story circles with viewed/unviewed states
+- ⏱️ Auto-progression after 5 seconds
+- ⏯️ Pause on hover functionality
+- 🎯 Progress indicator for each story
+- ⌨️ Keyboard navigation support
+- 📱 Responsive design
+- 🖱️ Click navigation areas
+- 🎨 Instagram-like UI/UX
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React Icons
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/namitmalasi/InstaStories
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## Usage
+
+- Click on any story circle to view stories
+- Navigate between stories:
+  - Click left/right sides of the screen
+  - Use left/right arrow keys
+  - Click the navigation arrows
+- Press ESC to exit story view
+- Hover over the story to pause auto-progression
+- Story progress is indicated by the bars at the top
+
+## Project Structure
+
+```
+src/
+├── components/
+│   └── Stories/
+│       ├── StoriesContainer.tsx
+│       ├── StoryCircle.tsx
+│       ├── StoryProgress.tsx
+│       └── StoryViewer.tsx
+├── data/
+│   └── mockData.ts
+├── types/
+│   └── index.ts
+├── App.tsx
+└── main.tsx
 ```
